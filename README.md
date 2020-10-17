@@ -4,11 +4,11 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* Carla d'Abreu Martins Vieira
+* Carla d'Abreu Martins Vieira 
 
 ## Professores responsáveis
 
-* Hugo Bastos de Paula
+* Hugo Bastos de Paula 
 
 ## Instruções de utilização
 
