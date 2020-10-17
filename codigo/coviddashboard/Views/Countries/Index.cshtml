@@ -1,0 +1,49 @@
+@model IEnumerable<app_aspnet_core.Models.Country>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="text-center">Países</h2>
+
+
+<div class="row">
+    <div class="col-12 col-md-6">
+        <a asp-action="Create" class="btn btn-primary">Adicionar País</a>
+    </div>
+    <div class="col-12 col-md-6">
+        <form asp-action="Index" method="get">
+            <p>
+                Nome: <input type="text" name="SearchString" placeholder="Brazil">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
+        <a asp-action="Index" class="btn btn-sm btn-success">Voltar</a>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
