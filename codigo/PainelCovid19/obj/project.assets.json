@@ -9188,19 +9188,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danie\\.nuget\\packages\\": {}
+    "C:\\Users\\tavin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danie\\source\\repos\\PainelCovid19\\PainelCovid19\\PainelCovid19.csproj",
+      "projectUniqueName": "C:\\Workspace\\asp-net-CarlaDanielOtavio_CovidDashboard\\codigo\\PainelCovid19\\PainelCovid19.csproj",
       "projectName": "PainelCovid19",
-      "projectPath": "C:\\Users\\danie\\source\\repos\\PainelCovid19\\PainelCovid19\\PainelCovid19.csproj",
-      "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danie\\source\\repos\\PainelCovid19\\PainelCovid19\\obj\\",
+      "projectPath": "C:\\Workspace\\asp-net-CarlaDanielOtavio_CovidDashboard\\codigo\\PainelCovid19\\PainelCovid19.csproj",
+      "packagesPath": "C:\\Users\\tavin\\.nuget\\packages\\",
+      "outputPath": "C:\\Workspace\\asp-net-CarlaDanielOtavio_CovidDashboard\\codigo\\PainelCovid19\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tavin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -48,7 +48,7 @@ namespace PainelCovid19.Controllers
         // GET: DadosCovids/Create
         public IActionResult Create()
         {
-            ViewData["PaisId"] = new SelectList(_context.Pais, "Codigo", "Codigo");
+            ViewData["PaisId"] = new SelectList(_context.Pais, "Codigo", "Nome");
             return View();
         }
 
@@ -82,7 +82,7 @@ namespace PainelCovid19.Controllers
             {
                 return NotFound();
             }
-            ViewData["PaisId"] = new SelectList(_context.Pais, "Codigo", "Codigo", dadosCovid.PaisId);
+            ViewData["PaisId"] = new SelectList(_context.Pais, "Nome", "Nome", dadosCovid.PaisId);
             return View(dadosCovid);
         }
 
