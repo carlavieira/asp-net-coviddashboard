@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PainelCovid19.Data;
 using PainelCovid19.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PainelCovid19.Controllers
 {

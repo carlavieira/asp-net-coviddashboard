@@ -5,49 +5,59 @@
 }
 
 <h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Pais)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CasosConfirmados)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Mortes)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Recuperados)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pais.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CasosConfirmados)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mortes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Recuperados)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Codigo">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
-            </td>
-        </tr>
+@if (User.Identity.IsAuthenticated)
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
 }
-    </tbody>
-</table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pais)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CasosConfirmados)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mortes)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Recuperados)
+                </th>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <th></th>
+
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pais.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CasosConfirmados)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mortes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Recuperados)
+                    </td>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Codigo">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
